@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-charcoal: #0a0a0a;
+  --color-electric-blue: #0070f3;
+  --color-electric-blue-glow: rgba(0, 112, 243, 0.3);
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  background-color: var(--color-charcoal);
+  color: white;
+}
+
+body {
+  @apply bg-charcoal text-white antialiased;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.electric-glow {
+  box-shadow: 0 0 20px var(--color-electric-blue-glow);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #ffffff, #0070f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
